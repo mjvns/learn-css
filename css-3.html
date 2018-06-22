@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>CSS Trans</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				margin-top: 25px;
+				margin-left: 25px;
+				
+				/*transform: rotate(45deg);*/
+				transform: skew(30deg);
+				transition:width 2s;
+				transition-property: all;
+				transition-timing-function: linear;
+
+				position: relative;
+				animation: myani 4s infinite;
+				animation-delay: 1s;
+				}
+
+			div:hover{
+					width: 300px;
+				}
+
+			@keyframes myani{
+				/*to{
+					top:0px;
+				}
+				from{
+					top:200px;
+				}*/
+				0%{
+					top: 0px;
+					left: 0px;
+				}
+				25%{
+					top: 0px;
+					left: 200px;
+					background-color: blue;
+				}
+				50%{
+					top: 150px;
+					left: 200px;
+					background-color: yellow;
+				}
+				75%{
+					top: 150px;
+					left: 0px;
+					background-color: green;
+				}
+				100%{
+					top: 0px;
+					left: 0px;
+					opacity: 0.4;
+				}
+			}
+
+			#sec-para{
+				font-family: myfont;
+			}
+
+			@font-face{
+				font-family: myfont;
+				src: url('ShadowsIntoLight.ttf');
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>Welcome to Web Designing course.</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</div>
+		<p id="sec-para">In this course you will get to know the technologies that make up awesome websites with full flexibility. You will create your own full fledged website using the same technologies that you have been taught.</p>
+	</body>
+</html>
